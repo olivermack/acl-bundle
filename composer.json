@@ -20,7 +20,7 @@
         "ext-xml": "*",
         "symfony/dependency-injection": "~3.4|~4.0",
         "symfony/http-kernel": "~3.4|~4.0",
-        "symfony/security-acl": "~2.7|~3.0",
+        "symfony/security-acl": "dev-with-sid-factory",
         "symfony/security-bundle": "~3.4|~4.0"
     },
     "require-dev": {
@@ -44,5 +44,11 @@
         "branch-alias": {
             "dev-master": "1.0-dev"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/olivermack/security-acl"
+        }
+    ]
 }

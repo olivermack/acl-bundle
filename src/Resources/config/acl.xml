@@ -14,6 +14,9 @@
             <argument type="service" id="security.authentication.trust_resolver" />
         </service>
 
+        <service id="security.acl.security_identity_factory" class="Symfony\Component\Security\Acl\Domain\SecurityIdentityFactory" />
+        <service id="Symfony\Component\Security\Acl\Model\SecurityIdentityFactoryInterface" alias="security.acl.security_identity_factory" />
+
         <service id="security.acl.permission_granting_strategy" class="Symfony\Component\Security\Acl\Domain\PermissionGrantingStrategy">
             <call method="setAuditLogger">
                 <argument type="service" id="security.acl.audit_logger" on-invalid="ignore" />
